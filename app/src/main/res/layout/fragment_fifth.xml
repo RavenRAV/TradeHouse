@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FifthFragment">
+
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/img_1"
+        app:layout_constraintBottom_toBottomOf="@+id/image_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="70dp"
+        android:text="@string/create_a_password"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_icon" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_main"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_radius"
+            android:hint="@string/passwordd"
+            android:inputType="numberPassword"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_again_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password"
+        app:passwordToggleEnabled="true"
+        tools:layout_editor_absoluteX="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_radius"
+            android:hint="@string/repeat_password"
+            android:inputType="numberPassword"
+            android:paddingStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_next"
+        android:text="@string/nextt"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_again_password" />
+</androidx.constraintlayout.widget.ConstraintLayout>

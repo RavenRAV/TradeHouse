@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".FirstFragment">
+    >
 
     <ImageView
         android:id="@+id/image_icon"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Введите почту для создания аккаунта"
+        android:text="@string/mail_for_ac"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -67,7 +67,7 @@
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintTop_toBottomOf="@+id/tv_main"
-        tools:ignore="MissingConstraints"
+        tools:ignore="MissingConstraints,TextViewEdits"
         tools:layout_editor_absoluteX="202dp" />
 
     <EditText
@@ -81,7 +81,8 @@
         android:paddingStart="20dp"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
+        tools:ignore="RtlSymmetry" />
 
     <Button
         android:id="@+id/btn_next"
@@ -89,7 +90,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_next"
-        android:text="Далее"
+        android:text="@string/next_one"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/ed_gmail" />
 
@@ -98,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Используйте соц.сеть для быстрой регистрации"
+        android:text="@string/social_network"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,5 +174,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_google"
         app:layout_constraintEnd_toEndOf="@+id/google_1"
         app:layout_constraintStart_toStartOf="@+id/google_1"
-        app:layout_constraintTop_toBottomOf="@+id/google_1" />
+        app:layout_constraintTop_toBottomOf="@+id/google_1"
+       />
 </androidx.constraintlayout.widget.ConstraintLayout>
