@@ -22,7 +22,6 @@ class OnBoardFragment :
 
     override fun initialize() {
         super.initialize()
-
         val adapter = OnboardAdapter(this)
         binding.onboadViewpager.adapter= adapter
         binding.springDotsIndicator.attachTo(binding.onboadViewpager)
