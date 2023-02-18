@@ -214,7 +214,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     
-    <Button
+    <TextView
         android:layout_width="46dp"
         android:layout_height="20dp"
         android:layout_marginStart="16dp"
