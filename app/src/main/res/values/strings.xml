@@ -5,4 +5,13 @@
     <string name="Ready">Готовы начать?</string>
     <string name="start_without_registration">Начать без регистрации</string>
     <string name="register">Зарегестрироваться</string>
+
+    <string name="edittext_hint_ot"><font size="12">   От</font></string>
+    <string name="edittext_hint_do"><font size="12">   До</font></string>
+
+    <string-array name="Filter">
+        <item>Купить</item>
+        <item>Снять</item>
+        <item>Продать</item>
+    </string-array>
 </resources>
