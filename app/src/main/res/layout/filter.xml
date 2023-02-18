@@ -115,8 +115,152 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-        
+
+    <TextView
+        android:id="@+id/tv_floor"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="352dp"
+        android:text="Этажность"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="376dp"
+        android:background="@drawable/rectangle_rounded_stroked"
+        android:hint="@string/edittext_hint_ot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="376dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_rounded_stroked"
+        android:hint="@string/edittext_hint_do"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_rooms"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="428dp"
+        android:text="Количество комнат"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="Cтудия"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="1"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="176.2dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="2"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="96dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="3"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="4+"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <Button
+        android:layout_width="46dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="509dp"
+        android:text="Город"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="534dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="Бишкек"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="534dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:text="Ош"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:layout_width="375dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="660dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Найти"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
