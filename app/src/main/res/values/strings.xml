@@ -5,4 +5,33 @@
     <string name="Ready">Готовы начать?</string>
     <string name="start_without_registration">Начать без регистрации</string>
     <string name="register">Зарегестрироваться</string>
+    <string name="_1_white_box" translatable="false">В городе Бишкек, на улице Пушкина продается 1-этажный элитный дом. Дом комфорт класса.В дом проведены теплые полы и выполнена обработка стен под white box. Дом сдан ПСО, можно начинать ремонт. Данный дом сквозной, отличный вариант для жилья или сдачи.</string>
+    <string name="opisanie" translatable="false">Описание</string>
+    <string name="raspolojenie" translatable="false">Расположение</string>
+    <string name="_15_000_000">15 000 000</string>
+    <string name="_100_m2">100 M2</string>
+    <string name="_8">8 сот.</string>
+    <string name="address">Адрес: Дом Колотушкина</string>
+    <string name="house">house</string>
+    <string name="location">location</string>
+    <string name="_1">1-эт.дом</string>
+    <string name="phone">Позвонить</string>
+    <string name="info">О доме</string>
+    <string name="floors">Этажи:</string>
+    <string name="one">1</string>
+    <string name="bathroom">Санузел:</string>
+    <string name="combined">Совмещенный</string>
+    <string name="rooms">Комнат:</string>
+    <string name="fife">5</string>
+    <string name="outside">На улицу</string>
+    <string name="square">Площадь(Общая):</string>
+    <string name="seilings">Высота потолков:</string>
+    <string name="_21">21 м.</string>
+    <string name="residential">Площадь(Жилая):</string>
+    <string name="contacts">Контакты</string>
+    <string name="windows">Окна:</string>
+    <string name="adress">Бишкек, улица Пушкина, дом Колатушкина</string>
+    <string name="sobs">Собственник</string>
+    <string name="obyavlenie">Размещает обьявления:</string>
+    <string name="nomer">Номер:</string>
 </resources>
