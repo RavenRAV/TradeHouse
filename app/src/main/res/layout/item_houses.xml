@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:layout_marginBottom="20dp">
+
+
+    <ImageView
+        android:id="@+id/iv_house"
+        android:layout_width="360dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/house_image"
+        android:src="@drawable/house"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_bookmark"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/bookmark"
+        app:layout_constraintEnd_toEndOf="@id/iv_house"
+        app:layout_constraintTop_toTopOf="@id/iv_house"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:text="15 000 000"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/iv_house"
+        app:layout_constraintTop_toBottomOf="@id/iv_house" />
+
+    <ImageView
+        android:id="@+id/tv_som"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/kgsom"
+        app:layout_constraintStart_toEndOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/tv_price"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price"/>
+
+    <TextView
+        android:id="@+id/tv_floor"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners_area"
+        android:gravity="center"
+        android:text="1 этаж"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_area_of_house"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners_area"
+        android:gravity="center"
+        android:text="100м2"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/tv_floor"
+        app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_area_of_land"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners_area"
+        android:gravity="center"
+        android:text="8 соток"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/tv_area_of_house"
+        app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="360dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/address"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_floor" />
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_call"
+        android:text="@string/call"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/tv_address"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+    <ImageButton
+        android:id="@+id/btn_dotes"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_btn_dots"
+        android:src="@drawable/dots"
+        app:layout_constraintLeft_toRightOf="@id/btn_call"
+        app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
