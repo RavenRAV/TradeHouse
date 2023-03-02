@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="18dp"
+    tools:context=".presentation.ui.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/user_guest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/name_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вы не зарегистрированы"
+            android:layout_marginStart="18dp"
+            app:layout_constraintStart_toEndOf="@+id/img_profile"
+            app:layout_constraintTop_toTopOf="@+id/img_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/img_profile"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/img_bookmark_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bookmark_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container_profile"
+        app:layout_constraintBottom_toBottomOf="@+id/container_profile"
+        />
+
+    <Button
+        android:id="@+id/btn_add_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить объявление"
+        app:layout_constraintTop_toBottomOf="@+id/container_profile"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/profile_btn"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мои объявления"
+        android:layout_marginTop="64dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_profile"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/description_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавляйте объявления в «Избранное»"
+        android:textColor="@color/dark_gray"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"/>
+    <LinearLayout
+        android:id="@+id/container_rv_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

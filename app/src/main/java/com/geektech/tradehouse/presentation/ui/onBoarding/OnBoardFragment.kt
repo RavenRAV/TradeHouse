@@ -1,10 +1,5 @@
 package com.geektech.tradehouse.presentation.ui.onBoarding
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -28,7 +23,7 @@ class OnBoardFragment :
     }
 
     override fun onClick() {
-        findNavController().navigate(R.id.mainFragment)
+        findNavController().navigate(R.id.searchFragment)
     }
 
 

@@ -44,12 +44,12 @@
 
     <ImageView
         android:id="@+id/tv_som"
-        android:layout_width="12dp"
-        android:layout_height="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/kgsom"
+        android:src="@drawable/som"
         app:layout_constraintStart_toEndOf="@id/tv_price"
         app:layout_constraintTop_toTopOf="@id/tv_price"
         app:layout_constraintBottom_toBottomOf="@id/tv_price"/>

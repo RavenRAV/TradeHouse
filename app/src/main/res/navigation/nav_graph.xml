@@ -14,4 +14,19 @@
         android:id="@+id/mainFragment"
         android:name="com.geektech.tradehouse.presentation.ui.main.MainFragment"
         android:label="MainFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.geektech.tradehouse.presentation.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.geektech.tradehouse.presentation.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/personalAccountFragment"
+        android:name="com.geektech.tradehouse.presentation.ui.personal_account.PersonalAccountFragment"
+        android:label="fragment_personal_account"
+        tools:layout="@layout/fragment_personal_account" />
 </navigation>
