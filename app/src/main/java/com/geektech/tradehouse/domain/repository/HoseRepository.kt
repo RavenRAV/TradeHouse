@@ -6,5 +6,5 @@ import com.geektech.tradehouse.domain.utils.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface HoseRepository {
-    fun getAllHouses() : Flow<Resource<HouseModel>>
+    fun getAllHouses() : Flow<Resource<List<HouseModel>>>
 }

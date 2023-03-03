@@ -1,6 +1,7 @@
 package com.geektech.tradehouse.presentation.ui.search
 
 import android.util.Log
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.geektech.tradehouse.R
@@ -28,6 +29,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding, SearchViewModel>(R.la
     override fun setupRequest() {
         super.setupRequest()
         viewModel.getAllHouses()
+        Log.e("loglog", "setupRequest: ", )
     }
 
     override fun setupSubscribers() {
@@ -37,6 +39,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding, SearchViewModel>(R.la
             onLoading = {},
             onSuccess = {
                 Log.e("ololo", "setupSubscribers: $it",)
+                Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT).show()
 //                adapter = SearchAdapter(it as ArrayList<HouseModel>)
 //                binding.rvSearch.adapter = adapter
             }

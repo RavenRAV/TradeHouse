@@ -7,6 +7,7 @@ import com.geektech.tradehouse.domain.model.House
 import com.geektech.tradehouse.domain.repository.HoseRepository
 import com.geektech.tradehouse.domain.utils.Resource
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class HouseRepositoryImpl @Inject constructor(
@@ -17,8 +18,13 @@ class HouseRepositoryImpl @Inject constructor(
 //        houseApi.getProducts()
 //    }
 
-    override fun getAllHouses(): Flow<Resource<HouseModel>>
-    = doRequest{
+    override fun getAllHouses(): Flow<Resource<List<HouseModel>>>
+    = flow {
+         doRequest{
         houseApi.getProducts()
     }
+    }
+
+
+
 }
