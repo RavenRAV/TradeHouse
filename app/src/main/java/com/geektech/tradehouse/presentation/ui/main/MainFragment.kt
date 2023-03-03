@@ -23,33 +23,5 @@ class MainFragment : BaseFragment<FragmentMainBinding, BaseViewModel>(R.layout.f
 
 }
 
-//<EditText
-//android:id="@+id/et_search"
-//android:layout_width="300dp"
-//android:layout_height="42dp"
-//android:background="@drawable/rounded_edittext_background"
-//android:drawableStart="@drawable/search"
-//android:drawablePadding="8dp"
-//android:hint="@string/search"
-//tools:ignore="MissingConstraints" />
-//
-//<ImageButton
-//android:id="@+id/et_filter"
-//android:layout_width="50dp"
-//android:layout_height="42dp"
-//android:layout_marginStart="8dp"
-//android:background="@drawable/rounded_edittext_background"
-//android:contentDescription="@string/filter"
-//android:src="@drawable/filter"
-//app:layout_constraintEnd_toEndOf="parent"
-//app:layout_constraintStart_toEndOf="@id/et_search"
-//tools:ignore="MissingConstraints" />
-//
-//<androidx.recyclerview.widget.RecyclerView
-//android:layout_width="match_parent"
-//android:layout_height="wrap_content"
-//android:layout_marginTop="30dp"
-//app:layout_constraintTop_toBottomOf="@id/et_search"
-//tools:listitem="@layout/item_houses" />
 
 
