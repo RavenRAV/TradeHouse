@@ -45,4 +45,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_search">search</string>
     <string name="title_user">user</string>
+
+    <string name="edittext_hint_ot"><font size="12">   От</font></string>
+    <string name="edittext_hint_do"><font size="12">   До</font></string>
+
+    <string-array name="Filter">
+        <item>Купить</item>
+        <item>Снять</item>
+        <item>Продать</item>
+    </string-array>
 </resources>
