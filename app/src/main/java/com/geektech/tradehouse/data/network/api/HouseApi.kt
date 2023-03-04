@@ -5,5 +5,8 @@ import retrofit2.http.GET
 
 interface HouseApi {
     @GET("products")
-    suspend fun getProducts(): HouseModel
+    suspend fun getHouses(): HouseModel
+//
+//    @GET("products")
+//    fun getHouses(): Call<HouseModel>
 }

@@ -11,13 +11,16 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class OnBoardFragment :
-    BaseFragment<FragmentOnBoardBinding, BaseViewModel>(R.layout.fragment_on_board), OnboardAdapter.BoardClick {
+    BaseFragment<FragmentOnBoardBinding, BaseViewModel>(R.layout.fragment_on_board),
+    com.geektech.tradehouse.presentation.ui.onBoarding.OnboardAdapter.BoardClick {
     override val binding by viewBinding(FragmentOnBoardBinding::bind)
     override val viewModel by viewModels<BaseViewModel>()
 
     override fun initialize() {
         super.initialize()
-        val adapter = OnboardAdapter(this)
+        val adapter = OnboardAdapter(
+                this
+            )
         binding.onboadViewpager.adapter= adapter
         binding.springDotsIndicator.attachTo(binding.onboadViewpager)
     }

@@ -3,7 +3,6 @@ package com.geektech.tradehouse.data.network.repository
 import com.geektech.tradehouse.data.base.BaseRepository
 import com.geektech.tradehouse.data.network.api.HouseApi
 import com.geektech.tradehouse.data.network.model.HouseModel
-import com.geektech.tradehouse.domain.model.House
 import com.geektech.tradehouse.domain.repository.HoseRepository
 import com.geektech.tradehouse.domain.utils.Resource
 import kotlinx.coroutines.flow.Flow
@@ -18,11 +17,10 @@ class HouseRepositoryImpl @Inject constructor(
 //        houseApi.getProducts()
 //    }
 
-    override fun getAllHouses(): Flow<Resource<List<HouseModel>>>
-    = flow {
+    override fun getAllHouses(): Flow<Resource<HouseModel>>
+    =
          doRequest{
-        houseApi.getProducts()
-    }
+        houseApi.getHouses()
     }
 
 

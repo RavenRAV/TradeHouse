@@ -47,7 +47,7 @@ abstract class BaseFragment<VB : ViewBinding, VM : ViewModel>(@LayoutRes layoutI
                                 showToast(state.message)
                         }
                         is UIState.Empty -> {}
-                        is UIState.Loading -> onLoading
+                        is UIState.Loading -> {onLoading}
                         is UIState.Success -> onSuccess(state.data)
                     }
                 }

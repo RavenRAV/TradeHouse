@@ -19,11 +19,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding, SearchViewModel>(R.la
     override val binding by viewBinding(FragmentSearchBinding::bind)
     override val viewModel by viewModels<SearchViewModel>()
     var adapter = SearchAdapter(arrayListOf())
-//    private val data = arrayListOf<Results>()
+    private val data = arrayListOf<Results>()
 
     override fun initialize() {
-//       var adapter = SearchAdapter(data)
-//        binding.rvSearch.adapter = adapter
+
     }
 
     override fun setupRequest() {
@@ -39,9 +38,8 @@ class SearchFragment : BaseFragment<FragmentSearchBinding, SearchViewModel>(R.la
             onLoading = {},
             onSuccess = {
                 Log.e("ololo", "setupSubscribers: $it",)
-                Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT).show()
-//                adapter = SearchAdapter(it as ArrayList<HouseModel>)
-//                binding.rvSearch.adapter = adapter
+                adapter = SearchAdapter(it.results)
+                binding.rvSearch.adapter = adapter
             }
         )
     }

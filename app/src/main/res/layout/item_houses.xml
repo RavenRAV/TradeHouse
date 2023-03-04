@@ -56,38 +56,41 @@
 
     <TextView
         android:id="@+id/tv_floor"
-        android:layout_width="65dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corners_area"
         android:gravity="center"
         android:text="1 этаж"
+        android:padding="8dp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="@id/tv_price"
         app:layout_constraintTop_toBottomOf="@id/tv_price" />
 
     <TextView
         android:id="@+id/tv_area_of_house"
-        android:layout_width="50dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corners_area"
         android:gravity="center"
         android:text="100м2"
+        android:padding="8dp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toRightOf="@id/tv_floor"
         app:layout_constraintTop_toBottomOf="@id/tv_price" />
 
     <TextView
         android:id="@+id/tv_area_of_land"
-        android:layout_width="50dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corners_area"
         android:gravity="center"
         android:text="8 соток"
+        android:padding="8dp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toRightOf="@id/tv_area_of_house"
         app:layout_constraintTop_toBottomOf="@id/tv_price" />

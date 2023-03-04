@@ -13,7 +13,7 @@ import javax.inject.Inject
 class SearchViewModel @Inject constructor(
     private val getAllHousesUseCase: GetAllHousesUseCase
 ): BaseViewModel() {
-    private val _getAllHousesState = MutableStateFlow<UIState<List<HouseModel>>>(UIState.Empty())
+    private val _getAllHousesState = MutableStateFlow<UIState<HouseModel>>(UIState.Empty())
     val getAllHousesState = _getAllHousesState.asStateFlow()
 
     fun getAllHouses(){

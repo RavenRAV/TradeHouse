@@ -40,6 +40,6 @@ class SearchAdapter(val list: ArrayList<Results>)
         holder.onBind(list[position])
     }
 
-    override fun getItemCount() = 2
+    override fun getItemCount() = list.size
 
 }

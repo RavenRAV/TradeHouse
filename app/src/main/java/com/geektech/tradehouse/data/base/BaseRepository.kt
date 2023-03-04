@@ -8,13 +8,17 @@ import java.io.IOException
 
 abstract class BaseRepository {
 
+
     protected fun <T> doRequest(request: suspend () -> T) = flow {
         emit(Resource.Loading())
         try {
-            emit(Resource.Success(request))
+            val data = request()
+            emit(Resource.Success(data))
         } catch (ioException: IOException) {
             emit(Resource.Error(ioException.localizedMessage ?: " Unknown exception"))
         }
     }.flowOn(Dispatchers.IO)
+
+
 
 }
