@@ -83,4 +83,26 @@
     <string name="sobs">Собственник</string>
     <string name="obyavlenie">Размещает обьявления:</string>
     <string name="nomer">Номер:</string>
+    <string name="new_ad">Новое объявление</string>
+    <string name="location_ad">Расположение</string>
+    <string name="create_address">Напишите адрес</string>
+    <string name="create_aprtment_nbr">Номер квартиры</string>
+    <string name="about_apartment">О квартире</string>
+    <string name="floor">Этаж</string>
+    <string name="square_rooms">Площадь комнат</string>
+    <string name="all_square">Общая</string>
+    <string name="living_square">Жилая</string>
+    <string name="ceiling_height">Высота потолков</string>
+    <string name="create_bathroom">Санузел</string>
+    <string name="combined_bathroom">Совмещенный</string>
+    <string name="separate_bathroom">Раздельный</string>
+    <string name="windows_create">Окна</string>
+    <string name="in_yard">Во двор</string>
+    <string name="to_the_street">На улицу</string>
+    <string name="photos">Фотографии</string>
+    <string name="select_photos">Выберите фотографии</string>
+    <string name="video">Видео</string>
+    <string name="Description">Описание</string>
+    <string name="link_video">Ссылка на видео</string>
+    <string name="description_create">Расскажите о квартире</string>
 </resources>

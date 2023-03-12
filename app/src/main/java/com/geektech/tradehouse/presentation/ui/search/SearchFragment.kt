@@ -14,7 +14,9 @@ import com.geektech.tradehouse.presentation.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SearchFragment : BaseFragment<FragmentSearchBinding, SearchViewModel>(R.layout.fragment_search) {
+class SearchFragment : BaseFragment<
+        FragmentSearchBinding,
+        SearchViewModel>(R.layout.fragment_search) {
 
     override val binding by viewBinding(FragmentSearchBinding::bind)
     override val viewModel by viewModels<SearchViewModel>()

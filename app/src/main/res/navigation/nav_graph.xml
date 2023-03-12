@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/searchFragment">
+    app:startDestination="@id/createAdFragment">
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -29,4 +29,9 @@
         android:name="com.geektech.tradehouse.presentation.ui.personal_account.PersonalAccountFragment"
         android:label="fragment_personal_account"
         tools:layout="@layout/fragment_personal_account" />
+    <fragment
+        android:id="@+id/createAdFragment"
+        android:name="com.geektech.tradehouse.presentation.ui.create_ad.CreateAdFragment"
+        android:label="fragment_create_ad"
+        tools:layout="@layout/fragment_create_ad" />
 </navigation>

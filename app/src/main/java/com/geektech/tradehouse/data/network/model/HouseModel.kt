@@ -14,7 +14,8 @@ data class Results (
     val price  : Int,
     val floor  : Int,
     val area   : Area,
-    val square : String
+    val square : String,
+    val address : String
         )
 
 data class Type (
