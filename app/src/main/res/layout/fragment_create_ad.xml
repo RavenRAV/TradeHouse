@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".presentation.ui.create_ad.CreateAdFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv_newad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_ad"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        style="@style/bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_sale"/>
+                <ImageView
+                    android:id="@+id/img_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_rent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тип недвижимости"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <Spinner
+                android:id="@+id/spn_type"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:background="@drawable/createad_rounded_stroke"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_ad"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/createad_rounded_stroke"
+                android:hint="@string/create_address"
+                android:textColorHint="@color/light_gray"
+                android:layout_margin="8dp"
+                android:padding="6dp"/>
+            <EditText
+                android:id="@+id/et_apartment_nmb"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/createad_rounded_stroke"
+                android:hint="@string/create_aprtment_nbr"
+                android:textColorHint="@color/light_gray"
+                android:layout_margin="8dp"
+                android:padding="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_apartment"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                style="@style/bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/floor"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <EditText
+                android:id="@+id/et_floor"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/createad_rounded_stroke"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/square_rooms"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_square"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_all"
+                    style="@style/bold"/>
+
+                <EditText
+                    android:id="@+id/et_all"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_all"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/createad_rounded_stroke"/>
+
+                <TextView
+                    android:id="@+id/tv_living"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/living_square"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/et_living"
+                    style="@style/bold"/>
+
+                <EditText
+                    android:id="@+id/et_living"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="8dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_living"
+                    app:layout_constraintTop_toBottomOf="@id/et_all"
+                    android:background="@drawable/createad_rounded_stroke"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ceiling_height"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <EditText
+                android:id="@+id/et_ceiling_height"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/createad_rounded_stroke"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_bathroom"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <CheckBox
+                android:id="@+id/cb_combined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/combined_bathroom"
+                android:textColor="@color/dark_gray"
+                android:buttonTint="@color/black"/>
+            <CheckBox
+                android:id="@+id/cb_separate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separate_bathroom"
+                android:textColor="@color/dark_gray"
+                android:buttonTint="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/windows_create"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <CheckBox
+                android:id="@+id/cb_yard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/in_yard"
+                android:textColor="@color/dark_gray"
+                android:buttonTint="@color/black"/>
+            <CheckBox
+                android:id="@+id/cb_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_the_street"
+                android:textColor="@color/dark_gray"
+                android:buttonTint="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/photos"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/img_select"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/dotted">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_photos"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <EditText
+                android:id="@+id/et_video"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/createad_rounded_stroke"
+                android:hint="@string/link_video"
+                android:textColorHint="@color/light_gray"
+                android:layout_margin="8dp"
+                android:padding="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Description"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                style="@style/bold"/>
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/createad_rounded_stroke"
+                android:hint="@string/description_create"
+                android:textColorHint="@color/light_gray"
+                android:layout_margin="8dp"
+                android:padding="6dp"/>
+
+            <ImageView
+                android:id="@+id/et_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/create_btn"
+                android:layout_gravity="center_horizontal"/>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
