@@ -3,23 +3,22 @@ package com.geektech.tradehouse.presentation.ui.search
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Adapter
 import coil.load
-import com.geektech.tradehouse.data.network.model.Results
+import com.geektech.tradehouse.data.network.model.ResultsDTO
 import com.geektech.tradehouse.databinding.ItemHousesBinding
 
-class SearchAdapter(val list: ArrayList<Results>)
+class SearchAdapter(val list: ArrayList<ResultsDTO>)
     : RecyclerView.Adapter<SearchAdapter.SearchViewHolder>(){
 
         inner class SearchViewHolder(val binding: ItemHousesBinding): RecyclerView.ViewHolder(binding.root){
-            fun onBind(results: Results){
+            fun onBind(results: ResultsDTO){
                 with(binding){
                     ivHouse.load(results.image)
                     tvPrice.setText(results.price.toString())
                     tvFloor.setText(results.floor.toString())
                     tvAreaOfLand.setText(results.square.toString())
                     tvAreaOfHouse.setText(results.area.title.toString())
-                    tvAddress.setText(results.area.title.toString())
+                    tvAddress.setText(results.address.toString())
 
                 }
             }

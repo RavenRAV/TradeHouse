@@ -1,14 +1,10 @@
 package com.geektech.tradehouse.presentation.ui.search
 
 import android.util.Log
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.geektech.tradehouse.R
-import com.geektech.tradehouse.data.network.model.Area
-import com.geektech.tradehouse.data.network.model.HouseModel
-import com.geektech.tradehouse.data.network.model.Results
-import com.geektech.tradehouse.data.network.model.Type
+import com.geektech.tradehouse.data.network.model.ResultsDTO
 import com.geektech.tradehouse.databinding.FragmentSearchBinding
 import com.geektech.tradehouse.presentation.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,7 +17,7 @@ class SearchFragment : BaseFragment<
     override val binding by viewBinding(FragmentSearchBinding::bind)
     override val viewModel by viewModels<SearchViewModel>()
     var adapter = SearchAdapter(arrayListOf())
-    private val data = arrayListOf<Results>()
+    private val data = arrayListOf<ResultsDTO>()
 
     override fun initialize() {
 

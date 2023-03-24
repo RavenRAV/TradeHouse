@@ -105,4 +105,10 @@
     <string name="Description">Описание</string>
     <string name="link_video">Ссылка на видео</string>
     <string name="description_create">Расскажите о квартире</string>
+
+    <string-array name="TypeAdCreate">
+        <item>Квартира</item>
+        <item>Дом</item>
+        <item>Новостройка</item>
+    </string-array>
 </resources>

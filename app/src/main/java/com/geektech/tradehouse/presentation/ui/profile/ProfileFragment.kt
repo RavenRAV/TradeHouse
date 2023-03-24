@@ -17,6 +17,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(R
         binding.containerProfile.setOnClickListener {
             findNavController().navigate(R.id.personalAccountFragment)
         }
+        binding.btnAddProfile.setOnClickListener {
+            findNavController().navigate(R.id.createAdFragment)
+        }
     }
 
 }

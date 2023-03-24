@@ -17,8 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
     <TextView
         android:id="@+id/tv_newad"
         android:layout_width="wrap_content"
@@ -61,6 +59,9 @@
                 android:id="@+id/spn_type"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
+                android:layout_margin="8dp"
+                android:paddingStart="3dp"
+                android:backgroundTint="@color/dark_blue"
                 android:background="@drawable/createad_rounded_stroke"/>
 
             <TextView
@@ -77,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/createad_rounded_stroke"
                 android:hint="@string/create_address"
+                android:textColor="@color/black"
                 android:textColorHint="@color/light_gray"
                 android:layout_margin="8dp"
                 android:padding="6dp"/>
@@ -86,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/createad_rounded_stroke"
                 android:hint="@string/create_aprtment_nbr"
+                android:textColor="@color/black"
                 android:textColorHint="@color/light_gray"
                 android:layout_margin="8dp"
                 android:padding="6dp"/>
@@ -110,6 +113,7 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_margin="8dp"
+                android:textColor="@color/black"
                 android:background="@drawable/createad_rounded_stroke"/>
 
             <TextView
@@ -140,6 +144,7 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_margin="8dp"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toEndOf="@id/tv_all"
                     app:layout_constraintTop_toTopOf="parent"
                     android:background="@drawable/createad_rounded_stroke"/>
@@ -160,6 +165,7 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_margin="8dp"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toEndOf="@id/tv_living"
                     app:layout_constraintTop_toBottomOf="@id/et_all"
                     android:background="@drawable/createad_rounded_stroke"/>
@@ -178,6 +184,7 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_margin="8dp"
+                android:textColor="@color/black"
                 android:background="@drawable/createad_rounded_stroke"/>
 
             <TextView
@@ -195,13 +202,16 @@
                 android:text="@string/combined_bathroom"
                 android:textColor="@color/dark_gray"
                 android:buttonTint="@color/black"/>
+
             <CheckBox
                 android:id="@+id/cb_separate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
                 android:text="@string/separate_bathroom"
                 android:textColor="@color/dark_gray"
-                android:buttonTint="@color/black"/>
+                tools:layout_editor_absoluteX="-11dp"
+                tools:layout_editor_absoluteY="63dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -236,8 +246,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/img_select"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:background="@drawable/dotted">
 
                 <TextView
@@ -245,10 +256,22 @@
                     android:layout_height="wrap_content"
                     android:text="@string/select_photos"
                     android:textColor="@color/black"
+                    android:layout_margin="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/img_create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -267,6 +290,7 @@
                 android:hint="@string/link_video"
                 android:textColorHint="@color/light_gray"
                 android:layout_margin="8dp"
+                android:textColor="@color/black"
                 android:padding="6dp"/>
 
             <TextView
@@ -284,11 +308,12 @@
                 android:background="@drawable/createad_rounded_stroke"
                 android:hint="@string/description_create"
                 android:textColorHint="@color/light_gray"
+                android:textColor="@color/black"
                 android:layout_margin="8dp"
                 android:padding="6dp"/>
 
             <ImageView
-                android:id="@+id/et_publish"
+                android:id="@+id/btn_publish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/create_btn"
