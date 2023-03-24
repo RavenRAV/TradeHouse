@@ -1,9 +1,12 @@
 package com.geektech.tradehouse.di
 
+import android.content.Context
+import android.content.SharedPreferences
 import com.geektech.tradehouse.data.network.api.HouseApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -39,6 +42,11 @@ object AppModule {
             .client(okHttpClient)
             .build()
             .create(HouseApi::class.java)
+    }
+
+    @Provides
+    fun providePreferences(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("board_pref", 0)
     }
 
 }

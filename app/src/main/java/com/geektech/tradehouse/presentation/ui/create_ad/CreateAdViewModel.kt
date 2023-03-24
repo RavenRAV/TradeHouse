@@ -7,6 +7,7 @@ import com.geektech.tradehouse.presentation.utils.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import okhttp3.MultipartBody
 import javax.inject.Inject
 
 @HiltViewModel

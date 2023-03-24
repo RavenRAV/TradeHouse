@@ -14,7 +14,11 @@ import com.geektech.tradehouse.data.network.model.HouseModelCreateDTO
 import com.geektech.tradehouse.databinding.FragmentCreateAdBinding
 import com.geektech.tradehouse.presentation.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import java.io.ByteArrayOutputStream
+import java.io.File
 
 @AndroidEntryPoint
 class CreateAdFragment : BaseFragment<
@@ -54,27 +58,26 @@ class CreateAdFragment : BaseFragment<
                 viewModel.createNewAd(
                     HouseModelCreateDTO(
                         typeList = "Новостройка",
-                        address = etAddress.text.toString() + etApartmentNmb.text.toString(),
+                        address = "ccsd",
                         floor = 3,
-                        square = etAll.text.toString(),
+                        square ="123",
                         livingSpace = 123456,
                         ceilingHeight = 123456,
-                        video = etVideo.toString(),
-                        description = etDescription.toString(),
-
+                        video = "1",
+                        description = "asdasdsa",
                         id = 1,
                         type = 1,
-                        area = 125415,
+                        area = 1,
                         rooms = 3,
-                        image = null,
+//                        image = uriInFile(imageUri),
                         price = 14343435,
-                        phoneNumber = "24243525",
+                        phoneNumber = "+9960555123123",
                         repair = "есть",
                         furniture = "есть",
                         bathroom = "совмещенный",
                         window = "на улицу",
-                        warmFloor = "есть",
-                        balcony = "есть"
+                        warmFloor = "Да",
+                        balcony = "Балкон"
 
 
 
@@ -83,6 +86,8 @@ class CreateAdFragment : BaseFragment<
             }
         }
     }
+
+
 
     override fun setupSubscribers() {
         viewModel.createNewAdState.collectState(
@@ -96,11 +101,19 @@ class CreateAdFragment : BaseFragment<
         )
     }
 
+    private fun uriInFile(uri: Uri?): MultipartBody.Part{
+        val file =File(uri!!.path)
+        val requestFile = RequestBody.create("image/jpeg".toMediaTypeOrNull(), file)
+        val image = MultipartBody.Part.createFormData("image", file.name, requestFile)
+        return image
+    }
+
     private val pickImage = registerForActivityResult(
         ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
         binding.imgCreate.setImageURI(uri)
         imageUri = uri
+//        uriInFile(uri)
 
 //        Log.e("uri",uri.toString(), )
         Log.e("uri", uri?.let { getImageAsBase64(it) }.toString(), )

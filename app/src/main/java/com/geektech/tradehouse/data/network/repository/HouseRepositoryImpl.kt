@@ -7,6 +7,7 @@ import com.geektech.tradehouse.data.network.model.HouseModelCreateDTO
 import com.geektech.tradehouse.domain.repository.HoseRepository
 import com.geektech.tradehouse.domain.utils.Resource
 import kotlinx.coroutines.flow.Flow
+import okhttp3.MultipartBody
 import javax.inject.Inject
 
 class HouseRepositoryImpl @Inject constructor(
