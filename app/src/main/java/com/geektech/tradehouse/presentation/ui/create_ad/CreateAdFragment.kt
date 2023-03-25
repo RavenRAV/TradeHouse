@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -13,6 +14,7 @@ import com.geektech.tradehouse.R
 import com.geektech.tradehouse.data.network.model.HouseModelCreateDTO
 import com.geektech.tradehouse.databinding.FragmentCreateAdBinding
 import com.geektech.tradehouse.presentation.base.BaseFragment
+import com.geektech.tradehouse.presentation.extention.showToast
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -27,10 +29,14 @@ class CreateAdFragment : BaseFragment<
     override val binding by viewBinding(FragmentCreateAdBinding::bind)
     override val viewModel by viewModels<CreateAdViewModel>()
     private var imageUri: Uri? = null
+    private lateinit var selectType: String
 
     override fun setupListeners() {
-        var selectType : String
         with(binding){
+            imgBackAd.setOnClickListener {
+                parentFragmentManager.popBackStack()
+            }
+
             val type = resources.getStringArray(R.array.TypeAdCreate)
             if(spnType != null) {
                 val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, type)
@@ -55,16 +61,36 @@ class CreateAdFragment : BaseFragment<
             }
 
             btnPublish.setOnClickListener {
+//                Log.e("base64", getImageAsBase64(imageUri!!).toString(), )
+
+                when{
+                    etAddress.text.isNullOrEmpty()
+                    ->{
+                        showToast("Вы забыли указать адрес")
+                    }
+                        etDescription.text.isNullOrEmpty()
+                        ->{
+                            showToast("Расскажите про дом")
+                        }
+                    etCeilingHeight.text.isNullOrEmpty()
+                    ->{
+                        showToast("Вы забыли рассказать про высоту потолка")
+                    }
+
+
+
+
+                    else -> {
                 viewModel.createNewAd(
                     HouseModelCreateDTO(
-                        typeList = "Новостройка",
-                        address = "ccsd",
-                        floor = 3,
-                        square ="123",
-                        livingSpace = 123456,
-                        ceilingHeight = 123456,
+                        typeList = selectType,
+                        address = etAddress.text.toString() + etApartmentNmb.text.toString(),
+                        floor = etFloor.text.toString().toInt(),
+                        square = etAll.text.toString(),
+                        livingSpace = etLiving.text.toString().toInt(),
+                        ceilingHeight = etCeilingHeight.text.toString().toInt(),
                         video = "1",
-                        description = "asdasdsa",
+                        description = etDescription.text.toString(),
                         id = 1,
                         type = 1,
                         area = 1,
@@ -83,6 +109,11 @@ class CreateAdFragment : BaseFragment<
 
                     )
                 )
+
+                parentFragmentManager.popBackStack()
+                    }
+                }
+
             }
         }
     }
@@ -113,9 +144,6 @@ class CreateAdFragment : BaseFragment<
     ) { uri: Uri? ->
         binding.imgCreate.setImageURI(uri)
         imageUri = uri
-//        uriInFile(uri)
-
-//        Log.e("uri",uri.toString(), )
         Log.e("uri", uri?.let { getImageAsBase64(it) }.toString(), )
     }
 
