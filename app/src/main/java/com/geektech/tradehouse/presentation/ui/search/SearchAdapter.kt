@@ -2,8 +2,10 @@ package com.geektech.tradehouse.presentation.ui.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.geektech.tradehouse.R
 import com.geektech.tradehouse.data.network.model.ResultsDTO
 import com.geektech.tradehouse.databinding.ItemHousesBinding
 

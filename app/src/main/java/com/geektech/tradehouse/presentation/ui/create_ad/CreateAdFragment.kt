@@ -69,7 +69,7 @@ class CreateAdFragment : BaseFragment<
                         type = 1,
                         area = 1,
                         rooms = 3,
-//                        image = uriInFile(imageUri),
+                        image = getImageAsBase64(imageUri!!),
                         price = 14343435,
                         phoneNumber = "+9960555123123",
                         repair = "есть",

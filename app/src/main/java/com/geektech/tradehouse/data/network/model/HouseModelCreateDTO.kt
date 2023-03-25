@@ -10,7 +10,7 @@ data class HouseModelCreateDTO(
     val type: Int,
     val area: Int,
     val rooms: Int,
-//    val image: String?,
+    val image: String?,
     val video: String,
     val price: Int,
     val address: String,
