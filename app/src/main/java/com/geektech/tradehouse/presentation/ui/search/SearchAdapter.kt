@@ -24,6 +24,10 @@ class SearchAdapter(val list: ArrayList<ResultsDTO>)
             }
         }
 
+    fun addPage(page: ArrayList<ResultsDTO>){
+        list.addAll(page)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
         return SearchViewHolder(
             ItemHousesBinding.inflate(

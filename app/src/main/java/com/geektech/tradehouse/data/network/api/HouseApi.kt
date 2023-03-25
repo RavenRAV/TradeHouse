@@ -7,7 +7,7 @@ import retrofit2.http.*
 interface HouseApi {
     @GET("products")
     suspend fun getHouses(
-        @Query("page") page: Int = 1
+        @Query("page") page: Int
     ): HouseModelDTO
 
 

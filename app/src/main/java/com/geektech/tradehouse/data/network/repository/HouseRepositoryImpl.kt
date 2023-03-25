@@ -18,10 +18,10 @@ class HouseRepositoryImpl @Inject constructor(
 //        houseApi.getProducts()
 //    }
 
-    override fun getAllHouses(): Flow<Resource<HouseModelDTO>>
+    override fun getAllHouses(page: Int): Flow<Resource<HouseModelDTO>>
     =
          doRequest{
-        houseApi.getHouses()
+        houseApi.getHouses(page)
     }
 
     override fun createNewAd(data: HouseModelCreateDTO): Flow<Resource<HouseModelCreateDTO>>

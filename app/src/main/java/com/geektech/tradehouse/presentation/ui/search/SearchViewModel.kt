@@ -16,7 +16,7 @@ class SearchViewModel @Inject constructor(
     private val _getAllHousesState = MutableStateFlow<UIState<HouseModelDTO>>(UIState.Empty())
     val getAllHousesState = _getAllHousesState.asStateFlow()
 
-    fun getAllHouses(){
-        getAllHousesUseCase().collectFlow(_getAllHousesState)
+    fun getAllHouses(page: Int){
+        getAllHousesUseCase(page).collectFlow(_getAllHousesState)
     }
 }

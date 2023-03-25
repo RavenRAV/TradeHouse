@@ -2,6 +2,7 @@ package com.geektech.tradehouse.presentation.ui.search
 
 import android.util.Log
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.geektech.tradehouse.R
 import com.geektech.tradehouse.data.network.model.ResultsDTO
@@ -18,14 +19,22 @@ class SearchFragment : BaseFragment<
     override val viewModel by viewModels<SearchViewModel>()
     var adapter = SearchAdapter(arrayListOf())
     private val data = arrayListOf<ResultsDTO>()
+    var page: Int = 1
 
     override fun initialize() {
-
+        binding.rvSearch.addOnScrollListener(object: RecyclerView.OnScrollListener(){
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (!recyclerView.canScrollVertically(1)){
+                    viewModel.getAllHouses(++page)
+                }
+            }
+        })
     }
 
     override fun setupRequest() {
         super.setupRequest()
-        viewModel.getAllHouses()
+        viewModel.getAllHouses(page)
         Log.e("loglog", "setupRequest: ", )
     }
 
@@ -36,11 +45,20 @@ class SearchFragment : BaseFragment<
             onLoading = {},
             onSuccess = {
                 Log.e("ololo", "setupSubscribers: $it",)
-                adapter = SearchAdapter(it.results)
-                binding.rvSearch.adapter = adapter
+//                adapter = SearchAdapter(it.results)
+
+                if (it.results != null){
+
+                    adapter.addPage(it.results)
+                    binding.rvSearch.adapter = adapter
+                }
+
+
             }
         )
     }
+
+
 
 
 

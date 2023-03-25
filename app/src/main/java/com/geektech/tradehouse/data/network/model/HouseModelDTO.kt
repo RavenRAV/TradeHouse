@@ -4,7 +4,7 @@ data class HouseModelDTO(
     val count    : Int,
     val next     : String,
     val previous : String,
-    val results  : ArrayList<ResultsDTO>
+    val results : ArrayList<ResultsDTO>?
 )
 
 data class ResultsDTO (

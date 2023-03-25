@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import okhttp3.MultipartBody
 
 interface HoseRepository {
-    fun getAllHouses() : Flow<Resource<HouseModelDTO>>
+    fun getAllHouses(page: Int) : Flow<Resource<HouseModelDTO>>
 
     fun createNewAd(data: HouseModelCreateDTO): Flow<Resource<HouseModelCreateDTO>>
 }

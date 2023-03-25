@@ -14,7 +14,7 @@ abstract class BaseRepository {
         try {
             val data = request()
             emit(Resource.Success(data))
-        } catch (ioException: IOException) {
+        } catch (ioException: Exception) {
             emit(Resource.Error(ioException.localizedMessage ?: " Unknown exception"))
         }
     }.flowOn(Dispatchers.IO)

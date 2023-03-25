@@ -6,5 +6,5 @@ import javax.inject.Inject
 class GetAllHousesUseCase @Inject constructor(
     private val houseRepository: HoseRepository
 ){
-   operator fun invoke() = houseRepository.getAllHouses()
+   operator fun invoke(page: Int) = houseRepository.getAllHouses(page)
 }
